@@ -1,0 +1,62 @@
+* {
+	box-sizing: border-box;
+}
+body {
+	background-color: crimson;
+	font-family: Tahoma, sans-serif;
+}
+header {
+	height: 370px;
+	color: #fff;
+	text-align: center;
+}
+
+h2 {
+	text-align: center;
+	letter-spacing: 7px;
+	text-transform: capitalize;
+}
+
+.games {
+	display: flex;
+	justify-content: flex-start;
+}
+
+.games .game {
+	color: #fff;
+	text-align: center;
+	width: 200px;
+	margin: 10px;
+	border: 1px solid #000;
+	border-radius: 10px;
+}
+
+.games .game:hover {
+	border-color: #fff;
+}
+
+.main,
+.left,
+.right {
+	background-color: whitesmoke;
+}
+
+.main {
+	height: 50px;
+}
+
+.columns {
+	display: flex;
+	justify-content: space-between;
+}
+
+.left {
+	width: 70%;
+	height: 230px;
+}
+
+.right {
+	width: 30%;
+	height: 230px;
+	text-align: right;
+}

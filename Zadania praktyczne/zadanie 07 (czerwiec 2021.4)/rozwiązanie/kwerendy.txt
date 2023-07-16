@@ -1,0 +1,11 @@
+kw1:
+SELECT id, imie, nazwisko, rok_urodzenia, zdjecie FROM osoby LIMIT 30;
+
+kw2:
+SELECT osoby.id, hobby.id, imie, nazwisko, rok_urodzenia, opis, zdjecie, nazwa FROM osoby JOIN hobby ON osoby.hobby_id = hobby.id WHERE osoby.id = 10;
+
+kw3:
+SELECT AVG(rok_urodzenia) AS 'Średni rok urodzenia', MIN(rok_urodzenia) AS 'Najniższy rok urodzenia', MAX(rok_urodzenia) AS 'Najwyższy rok urodzenia' FROM osoby;
+
+kw4:
+UPDATE osoby SET opis = 'kolarstwo' WHERE hobby_id = 4;

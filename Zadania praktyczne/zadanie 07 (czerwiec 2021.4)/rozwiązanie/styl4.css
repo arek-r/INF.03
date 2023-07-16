@@ -1,0 +1,33 @@
+body {
+	margin: 0;
+	font-family: Helvetica, sans-serif;
+}
+.main {
+	display: flex;
+}
+header, footer {
+	background-color: #af4448;
+	color: #fff;
+	text-align: center;
+	height: 20px;
+}
+.left, .right {
+	background-color: #ffa4a2;
+	height: 650px;
+	width: 50%;
+}
+.left ol {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+.right input[type="submit"] {
+	background-color: #af4448;
+	color: #fff;
+	padding: 5px;
+	margin: 10px;
+}
+header h3,
+footer p {
+	margin: 0;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Miernik jakości hasła</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+    <header>
+        <h1><a href="index.html">Sprawdź swoje hasło</a></h1>
+    </header>
+    <section class="left">
+        <h2>Wybierz</h2>
+        <ol>
+            <li><a href="haslo.html">Sprawdź hasło</a></li>
+            <li><a href="zasady.html">Zasady tworzenia hasła</a></li>
+        </ol>
+    </section>
+    <section class="right">
+        <p>
+            Twoje hasło:
+            <input type="text" id="haslo">
+            <button id="sprawdz">Sprawdź</button>
+        </p>
+        <p id="info"></p>
+    </section>
+    <footer>
+        <h3>Miernik jakości hasła</h3>
+        <p>Stronę opracował: 01234567890</p>
+    </footer>
+    <script>
+        const haslo = document.querySelector('#haslo');
+        const btn = document.querySelector('#sprawdz');
+        const info = document.querySelector('#info');
+
+        const checkPass = () => {
+            if(!haslo.value) {
+                info.style.color = 'red';
+                info.textContent = 'Wpisz hasło!';
+            }
+            else {
+                if((haslo.value.length >= 7) && (haslo.value.search('[0-9]') > 0)) {
+                    info.style.color = 'green';
+                    info.textContent = 'dobre';
+                }
+                else if((haslo.value.length >= 4) && (haslo.value.length <= 6) && (haslo.value.search('[0-9]') > 0)) {
+                    info.style.color = 'blue';
+                    info.textContent = 'średnie';
+                }
+                else {
+                    info.style.color = 'yellow';
+                    info.textContent = 'słabe';
+                }
+            }
+        }
+
+        btn.addEventListener('click', checkPass);
+    </script>
+</body>
+</html>
